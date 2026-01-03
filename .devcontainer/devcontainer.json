@@ -4,7 +4,8 @@
   "remoteUser": "node",
 //   mount the local workspace to the container
   "mounts": [
-    "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+    "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/.ssh,target=/home/node/.ssh,type=bind,consistency=cached"
   ],
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
